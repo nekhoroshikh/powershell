@@ -1,0 +1,1 @@
+Get-ChildItem %SystemRoot%\System32\Winevt\Logs\ -Include 'Archive-*' -Recurse | ? LastWriteTime -LT (Get-Date).AddDays(-90) | Remove-Item
